@@ -30,7 +30,7 @@ module CrunchBaseV2
       resp = resp.gsub(/[[:cntrl:]]/, '')
       
       parsed_info = JSON.parse(resp)
-      raise CrunchException, persed_info["error"] if persed_info.class == Hash && persed_info["error"]
+      raise CrunchException, parsed_info["error"] if parsed_info.class == Hash && parsed_info["error"]
       
       return parsed_info
     end

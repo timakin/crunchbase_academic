@@ -5,11 +5,6 @@ module CrunchBaseV2
       					:born_year, :born_month, :born_day, :born_on, :experience,
       					:founded_company, :degrees, :advisor_at, :investments
 
-
-		def get(permalink)
-			super
-		end
-
 		def initialize(json)
 			@permalink = json['data']['properties']['permalink']
 		end
