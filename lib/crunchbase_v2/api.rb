@@ -9,7 +9,7 @@ require 'timeout'
 # =================
 module CrunchBaseV2
   class API
-  	attr_accessor :timeout_limit, :key
+  	class << self; attr_accessor :timeout_limit, :key end
   	CB_URL = 'http://api.crunchbase.com/v/2/'
   	@timeout_limit = 60
 
