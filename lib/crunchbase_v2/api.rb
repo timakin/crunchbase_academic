@@ -13,6 +13,13 @@ module CrunchBaseV2
   	CB_URL = 'http://api.crunchbase.com/v/2/'
   	@timeout_limit = 60
 
+    def self.fetch(permalink, object_name)
+      uri = CB_URL + "#{object_name}/#{permalink}"
+      get_json_response(uri)
+    end
+
+    private
+
   	def self.get_json_response(uri)
       raise CrunchException, "API key required, visit http://developer.crunchbase.com" unless @key
       uri = uri + "#{uri.match('\?') ? "&" : "?"}user_key=#{@key}"
@@ -27,8 +34,6 @@ module CrunchBaseV2
       
       return parsed_info
     end
-
-    private
 
     def self.get_url_following_redirects(uri_str, limit = 10)
       raise CrunchException, 'HTTP redirect too deep' if limit == 0
