@@ -13,8 +13,8 @@ module CrunchBaseV2
   	CB_URL = 'http://api.crunchbase.com/v/2/'
   	@timeout_limit = 60
 
-    def self.fetch(permalink, object_name)
-      uri = CB_URL + "#{object_name}/#{permalink}"
+    def self.fetch(permalink, object)
+      uri = CB_URL + "#{object}/#{permalink}"
       get_json_response(uri)
     end
 
