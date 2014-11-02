@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = CrunchbaseV2::VERSION
   spec.authors       = ["timakin"]
   spec.email         = ["timaki.st@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = "Gemfile for CrunchBaseAPI ver2.0"
+  spec.summary       = "Gemfile for CrunchBaseAPI ver2.0"
   spec.homepage      = ""
   spec.license       = "MIT"
 
