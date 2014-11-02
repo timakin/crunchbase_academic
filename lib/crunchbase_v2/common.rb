@@ -4,7 +4,8 @@ module CrunchBaseV2
   	
   	def get(permalink)
   		data = API.fetch(permalink, self::OBJECT_NAME)
-  		self.new(data)
+  		new_class = self.new(data)
+  		return new_class
   	end
   end
 end
