@@ -7,7 +7,7 @@ require 'timeout'
 # API.key registration
 # Access to authorized JSON api weblink.
 # =================
-module CrunchBaseV2
+module CrunchbaseAcademic
   class API
   	class << self; attr_accessor :timeout_limit, :key end
   	CB_URL = 'http://api.crunchbase.com/v/2/'

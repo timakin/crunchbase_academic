@@ -1,4 +1,4 @@
-module CrunchBaseV2
+module CrunchbaseAcademic
 	class Person < Common
 		OBJECT_NAME = 'person'
     attr_reader :first_name, :last_name, :permalink, :birthplace,

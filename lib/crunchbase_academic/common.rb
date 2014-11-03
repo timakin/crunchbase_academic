@@ -1,4 +1,4 @@
-module CrunchBaseV2
+module CrunchbaseAcademic
   class Common
   	OBJECT_NAME = 'undefined'
   	

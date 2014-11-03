@@ -1,4 +1,4 @@
-module CrunchBaseV2
+module CrunchbaseAcademic
 	class Organization < Common
 		OBJECT_NAME = 'organization'
 		attr_reader :total_funding_usd, :products, :news, :founded_on, :founded_on_year

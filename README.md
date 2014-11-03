@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'crunchbase_v2'
+    gem 'crunchbase_academic'
 
 And then execute:
 
@@ -14,11 +14,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install crunchbase_v2
+    $ gem install crunchbase_academic
 
 ## Usage
 
-TODO: Write usage instructions here
+		$ require 'crunchbase_academic'
+		$ CrunchbaseAcademic::API.key = 'your_api_auth_key'
+		$ test = CrunchbaseAcademic::Person('steve-jobs')
+		$ puts test.founded_company
+		$ # It'll show the parameters of jobs owned companies.
 
 ## Contributing
 
