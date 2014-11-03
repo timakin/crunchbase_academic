@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["timaki.st@gmail.com"]
   spec.description   = "Gemfile for CrunchBaseAPI ver2.0"
   spec.summary       = "Gemfile for CrunchBaseAPI ver2.0"
-  spec.homepage      = "github.com/timakin/crunchbase_v2"
+  spec.homepage      = "https://github.com/timakin/crunchbase_v2"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
