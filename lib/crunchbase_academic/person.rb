@@ -1,9 +1,9 @@
 module CrunchbaseAcademic
 	class Person < Common
 		OBJECT_NAME = 'person'
-    attr_reader :first_name, :last_name, :permalink, :birthplace,
-      					:born_on_year, :born_month, :born_day, :born_on, :experience,
-      					:founded_company, :degrees, :advisor_at, :investments
+		attr_reader :first_name, :last_name, :permalink, :birthplace,
+		:born_on_year, :born_month, :born_day, :born_on, :experience,
+		:founded_company, :degrees, :advisor_at, :investments
 
 		def initialize(json)
 			@permalink 			 ||= json['data']['properties']['permalink']

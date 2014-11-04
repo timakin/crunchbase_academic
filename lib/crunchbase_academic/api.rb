@@ -20,10 +20,10 @@ module CrunchbaseAcademic
 
     private
 
-  	def self.get_json_response(uri)
+    def self.get_json_response(uri)
       raise CrunchException, "API key required, visit http://developer.crunchbase.com" unless @key
       uri = uri + "#{uri.match('\?') ? "&" : "?"}user_key=#{@key}"
-       
+      
       resp = Timeout::timeout(@timeout_limit) {
         get_url_following_redirects(uri, @redirect_limit)
       }
@@ -41,12 +41,12 @@ module CrunchbaseAcademic
       url = URI.parse(uri_str)
       response = Net::HTTP.start(url.host, url.port) { |http| http.get(url.request_uri) }
       case response
-        when Net::HTTPSuccess, Net::HTTPNotFound
-          response.body
-        when Net::HTTPRedirection
-          get_url_following_redirects(response['location'], limit - 1)
-        else
-          response.error!
+      when Net::HTTPSuccess, Net::HTTPNotFound
+        response.body
+      when Net::HTTPRedirection
+        get_url_following_redirects(response['location'], limit - 1)
+      else
+        response.error!
       end
     end
   end
